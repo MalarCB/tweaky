@@ -28,8 +28,6 @@ var hasClass, addClass, removeClass;
 if ( 'classList' in document.documentElement ) {
 
   hasClass = function( elem, c ) {
-      console.log(elem);
-      console.log(c);
     return elem.classList.contains( c );
   };
   addClass = function( elem, c ) {
@@ -39,8 +37,6 @@ if ( 'classList' in document.documentElement ) {
         elem.classList.add( c );
   };
   removeClass = function( elem, c ) {
-      console.log(elem);
-      console.log(c);
       if (elem != null)
         elem.classList.remove( c );
   };
