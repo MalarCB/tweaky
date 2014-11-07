@@ -13,7 +13,6 @@
 
 /log/*.log
 /tmp
-/bin
 /coverage
 
 /.idea
