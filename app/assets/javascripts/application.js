@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
-//= require bootstrap-select
-
 //= require_tree .
+
+$(document).ready(function(e){
+    $('#myCarousel').carousel({
+        interval:   4000
+    });
+})
