@@ -38,4 +38,4 @@ end
 
 gem 'jquery-colorbox-rails'
 gem 'colorbox-rails'
-
+gem 'geocoder'

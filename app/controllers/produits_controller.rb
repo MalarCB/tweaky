@@ -2,7 +2,7 @@ class ProduitsController < ApplicationController
   layout 'admin_layout', except: [:display]
   before_action :set_produit, only: [:show, :edit, :update, :destroy]
   before_filter :restrict_admin_tool_access_by_ipaddress, except: [:display]
-
+  before_action :additional_params, only: [:create]
   def display
     @produits = Produit.all
   end
@@ -75,4 +75,8 @@ class ProduitsController < ApplicationController
     def produit_params
       params.require(:produit).permit(:name, :imagename, :url, :prixvente, :prixnet, :devise, :commission, :stock, :likes, :downloads, :tags, :status)
     end
+
+  def additional_params
+    params[:produit][:admin_ip] = request.remote_ip
+  end
 end

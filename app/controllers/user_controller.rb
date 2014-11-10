@@ -1,5 +1,6 @@
 class UserController < ApplicationController
   before_action :set_user, only: [:destroy]
+  before_action :additional_params, only: [:create]
 
   def index
     @users = User.all
@@ -53,6 +54,15 @@ class UserController < ApplicationController
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def additional_params
+    begin
+      params[:user][:ipaddress] = request.remote_ip
+      params[:user][:country] = request.location.country
+    rescue
+
     end
   end
 

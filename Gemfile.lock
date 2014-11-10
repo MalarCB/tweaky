@@ -73,6 +73,7 @@ GEM
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     fssm (0.2.10)
+    geocoder (1.2.0)
     heroku (3.10.1)
       heroku-api (~> 0.3.19)
       launchy (>= 0.3.2)
@@ -206,6 +207,7 @@ DEPENDENCIES
   compass-rails
   factory_girl_rails (~> 4.4.1)
   font-awesome-rails
+  geocoder
   heroku
   jbuilder (~> 2.0)
   jquery-colorbox-rails
