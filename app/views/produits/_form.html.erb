@@ -1,0 +1,68 @@
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
+        <div class="post-container">
+          <div class="post-content">
+            <%= form_for(@produit) do |f| %>
+                <% if @produit.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@produit.errors.count, "error") %> prohibited this produit from being saved:</h2>
+
+                      <ul>
+                        <% @produit.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                <% end %>
+
+                <div class="field">
+                  <%= f.label :name %><br>
+                  <%= f.text_field :name %>
+                </div>
+                <div class="field">
+                  <%= f.label :imagename %><br>
+                  <%= f.text_field :imagename %>
+                </div>
+                <div class="field">
+                  <%= f.label :url %><br>
+                  <%= f.text_field :url %>
+                </div>
+                <div class="field">
+                  <%= f.label :prixvente %><br>
+                  <%= f.text_field :prixvente %>
+                </div>
+                <div class="field">
+                  <%= f.label :prixnet %><br>
+                  <%= f.text_field :prixnet %>
+                </div>
+                <div class="field">
+                  <%= f.label :devise %><br>
+                  <%= f.text_field :devise %>
+                </div>
+                <div class="field">
+                  <%= f.label :commission %><br>
+                  <%= f.text_field :commission %>
+                </div>
+                <div class="field">
+                  <%= f.label :stock %><br>
+                  <%= f.number_field :stock %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :tags %><br>
+                  <%= f.text_area :tags %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

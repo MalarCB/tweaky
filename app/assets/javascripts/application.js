@@ -10,13 +10,19 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require bootstrap-select
 //= require turbolinks
+//= require jquery.colorbox
+//= require colorbox-rails
 //= require_tree .
 
 $(document).ready(function(e){
     $('#myCarousel').carousel({
         interval:   4000
     });
+    $('.post-image').colorbox();
 })

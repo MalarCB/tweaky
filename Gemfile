@@ -25,14 +25,17 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'bootstrap'
-gem 'font-awesome-rails'
-gem 'font-awesome-sass'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.1'
 
+gem 'font-awesome-rails'
 gem 'bootstrap-select-rails'
 gem 'compass-rails'
 gem 'select2-rails'
+
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'jquery-colorbox-rails'
+gem 'colorbox-rails'
+

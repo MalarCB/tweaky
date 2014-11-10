@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108082536) do
+ActiveRecord::Schema.define(version: 20141110193902) do
 
   create_table "details", force: true do |t|
     t.datetime "created_at"
@@ -19,6 +19,57 @@ ActiveRecord::Schema.define(version: 20141108082536) do
   end
 
   create_table "homes", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.string   "imagename"
+    t.string   "url"
+    t.decimal  "prixvente"
+    t.decimal  "prixnet"
+    t.decimal  "commission"
+    t.integer  "stock"
+    t.integer  "likes"
+    t.integer  "downloads"
+    t.text     "tags"
+    t.boolean  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "produits", force: true do |t|
+    t.string   "name"
+    t.string   "imagename"
+    t.string   "url"
+    t.decimal  "prixvente"
+    t.decimal  "prixnet"
+    t.string   "devise"
+    t.decimal  "commission"
+    t.integer  "stock"
+    t.integer  "likes"
+    t.integer  "downloads"
+    t.text     "tags"
+    t.boolean  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.string   "token"
+    t.boolean  "status"
+    t.string   "ipaddress"
+    t.string   "siteid"
+    t.text     "address1"
+    t.text     "address2"
+    t.text     "address3"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.integer  "zipcode"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
