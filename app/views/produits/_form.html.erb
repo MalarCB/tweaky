@@ -51,10 +51,25 @@
                 </div>
 
                 <div class="field">
+                  <%= f.label :likes %><br>
+                  <%= f.number_field :likes %>
+                </div>
+                <div class="field">
+                  <%= f.label :downloads %><br>
+                  <%= f.number_field :downloads %>
+                </div>
+                <div class="field">
                   <%= f.label :tags %><br>
                   <%= f.text_area :tags %>
                 </div>
-
+                <div class="field">
+                  <%= f.label :status %><br>
+                  <%= f.check_box :status %>
+                </div>
+                <div class="field">
+                  <%= f.label :vues %><br>
+                  <%= f.check_box :vues %>
+                </div>
                 <div class="actions">
                   <%= f.submit %>
                 </div>
