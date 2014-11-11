@@ -68,8 +68,8 @@ class ProduitsController < ApplicationController
     end
   end
 
-  def image_not_found
-    render 'public/avatar.jpg'
+  def download
+    send_file 'avatar.jpg', :type => 'image/jpeg', :disposition => 'attachment'
   end
 
   private

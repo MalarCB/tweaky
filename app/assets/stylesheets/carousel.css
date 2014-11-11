@@ -7,54 +7,115 @@ Additional Styles (required)
 #myCarousel .thumbnail {
     margin-bottom: 0;
 }
+
 .carousel-control.left, .carousel-control.right {
-    background-image:none !important;
+    background-image: none !important;
 }
-.carousel-control {
-    color:#fff;
-    top:40%;
-    color:#428BCA;
-    bottom:auto;
-    padding-top:4px;
-    width:30px;
-    height:30px;
-    text-shadow:none;
-    opacity:1;
+
+#products .carousel-control {
+    color: #fff;
+    top: 40%;
+    color: #428BCA;
+    bottom: auto;
+    padding-top: 4px;
+    width: 30px;
+    height: 30px;
+    text-shadow: none;
+    opacity: 1;
 }
+
 .carousel-control:hover {
     color: #d9534f;
 }
+
 .carousel-control.left, .carousel-control.right {
-    background-image:none !important;
+    background-image: none !important;
 }
-.carousel-control.right {
-    left:auto;
-    right:-32px;
+
+#products .carousel-control.right {
+    left: auto;
+    right: -32px;
 }
-.carousel-control.left {
-    right:auto;
-    left:-32px;
+
+#products .carousel-control.left {
+    right: auto;
+    left: -32px;
 }
 
 .carousel-indicators {
-    bottom:-30px;
+    bottom: -30px;
 }
+
 .carousel-indicators li {
-    border-radius:0;
-    width:10px;
-    height:10px;
-    background:#ccc;
-    border:1px solid #ccc;
+    border-radius: 0;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border: 1px solid #ccc;
 }
+
 .carousel-indicators .active {
-    width:12px;
-    height:12px;
-    background:#3276b1;
-    border-color:#3276b1;
+    width: 12px;
+    height: 12px;
+    background: #3276b1;
+    border-color: #3276b1;
 }
+
 .btn-primary {
     background-color: #18bc9c !important;
 }
+
 .btn-default {
     background-color: #18bc9c !important;;
+}
+
+
+
+.item img {
+    width:100%;
+}
+
+.carousel-control.left {
+    top:40%
+}
+.carousel-control.right {
+    top:40%
+}
+.carousel-caption {
+    top:15%;
+    text-align:left;
+    height:auto;
+
+}
+.carousel-caption h2 {
+    line-height:160%
+}
+.carousel-caption h2 span {
+    background:#428BCA;
+    padding:10px 20px;
+    color:#fff;
+}
+p.caption {
+    background:#fff;
+    padding:6px;
+    text-shadow:none;
+    color:#428BCA;
+}
+
+.item_1
+{
+    background-image: url(intro_1.png);
+}
+
+.item_2
+{
+    background-image: url(intro_5.png);
+}
+.item_3
+{
+    background-image: url(intro_3.png);
+}
+.item_4
+{
+    background-image: url(intro_4.png);
 }

@@ -25,6 +25,5 @@ Rails.application.routes.draw do
   get 'product/new', to: 'product#new', as: :new_product
   post 'products', to: 'product#create', as: :create_product
 
-  get 'detail/img/:img_name', to: 'produits#image_not_found', as: :not_image_found
-
+  get 'download', to: 'produits#download', as: :download
 end

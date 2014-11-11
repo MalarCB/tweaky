@@ -21,7 +21,10 @@
 
 $(document).ready(function(e){
     $('#myCarousel').carousel({
-        interval:   4000
+        interval:   5000
+    });
+    $('#myCarousel_intro').carousel({
+        interval:   2000
     });
     $('.post-image').colorbox();
 })
