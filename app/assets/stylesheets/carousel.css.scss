@@ -104,18 +104,18 @@ p.caption {
 
 .item_1
 {
-    background-image: url(intro_1.png);
+    background-image: url(image-path('intro_1.png'));
 }
 
 .item_2
 {
-    background-image: url(intro_5.png);
+  background-image: url(image-path('intro_5.png'));
 }
 .item_3
 {
-    background-image: url(intro_3.png);
+  background-image: url(image-path('intro_3.png'));
 }
 .item_4
 {
-    background-image: url(intro_4.png);
+  background-image: url(image-path('intro_4.png'));
 }
