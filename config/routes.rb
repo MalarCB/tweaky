@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :produits
+  resources :produits do
+    resources :comments, :only => [:create]
+  end
 
   root 'home#index'
 
-  get 'detail', to: 'detail#index', as: :detail
+  #get 'detail', to: 'detail#index', as: :detail
+
+  get 'detail/:id', to: 'produits#detail', as: :detail
 
   get 'display', to: 'produits#display', as: :vitrine
 #  get 'products', to: 'product#index', as: :admin_products
@@ -17,9 +21,10 @@ Rails.application.routes.draw do
   get 'user/signup', to: 'user#signup', as: :sign_up
   post 'user/signup', to: 'user#register', as: :register
 
-
   get 'products', to: 'product#index', as: :products
   get 'product/new', to: 'product#new', as: :new_product
   post 'products', to: 'product#create', as: :create_product
+
+  get 'detail/img/:img_name', to: 'produits#image_not_found', as: :not_image_found
 
 end

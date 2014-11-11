@@ -1,0 +1,203 @@
+<div id="content">
+    <div class="container">
+        <div class="row">
+<!-- begin:sidebar -->
+            <div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-xs-12">
+  <!-- begin:detail-option -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="detail-option">
+                        <ul class="list-options">
+                          <li><a href="#"><i class="fa fa-share-alt"></i> <span>Share</span></a></li>
+                          <li><a href="#"><i class="fa fa-comment"></i> <span>Comment</span></a></li>
+                          <li><a href="#"><i class="fa fa-cloud-download"></i> <span>Download</span></a></li>
+                          <li><a href="#"><i class="fa fa-heart"></i> <span>Love</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <!-- end:detail-option -->
+  <!-- begin:recent-images -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="widget-title">
+                        <h3>Price</h3>
+                      </div>
+                      <div class="detail-similiar">
+                        <h1>
+                          <%= @produit.prixvente %>
+                          <i class="fa fa-eur"></i>
+                          <a href="#" class="btn btn-primary" role="button">
+                            <i class="fa fa-shopping-cart"></i>
+                            <b>Order Now</b>
+                          </a>
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <!-- end:recent-images -->
+  <!-- begin:similiar-images -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="widget-title">
+                        <h3>Similiar Images</h3>
+                      </div>
+                      <div class="detail-similiar">
+                        <ul class="list-similiars">
+                          <li><a href="detail.html"><%= image_tag('avatar.jpg', class: 'img-responsive', style: 'height:30px') %></a></li>
+                          <li><a href="detail.html"><%= image_tag('avatar.jpg', class: 'img-responsive', style: 'height:30px') %></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <!-- end:similiar-images -->
+
+  <!-- begin:tags -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="widget-title">
+                        <h3>Tags</h3>
+                      </div>
+                      <ul class="tags">
+                        <li><a href="#"><%= @produit.tags %> </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="widget-title">
+                        <h3>Recent Images</h3>
+                      </div>
+                      <div class="detail-similiar">
+                        <ul class="list-similiars">
+                          <li><a href="detail.html"><%= image_tag('avatar.jpg', class: 'img-responsive', style: 'height:30px') %></a></li>
+                          <li><a href="detail.html"><%= image_tag('avatar.jpg', class: 'img-responsive', style: 'height:30px') %></a></li>
+                        </ul>
+                      </div>
+                      <hr>
+                      <%= image_tag('avatar.jpg', class: 'img-responsive img-avatar', style: 'height:30px') %> See all images by <a href="#">Frans</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <!-- end:tags -->
+         </div>
+<!-- end:sidebar -->
+
+<!-- begin:article -->
+            <div class="col-md-9 col-md-pull-3 col-sm-8 col-sm-pull-4 col-xs-12">
+  <!-- begin:article-content -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="detail-meta">
+                            Posted <em><%= time_ago_in_words(@produit.created_at)%></em> ago
+                            <span>
+                              <a href="#">
+                                <%= @produit.comments.size %> comments
+                              </a>
+                            </span>
+                          </div>
+                          <div class="detail-heading-title">
+                            <h2><%= @produit.name %></h2>
+                          </div>
+
+                          <%= image_tag(@produit.url, class: 'img-responsive') %>
+                          <br>
+                          <div class="detail-meta">
+                            <i class="fa fa-tags"></i> Tags : <a href="#"> <%= @produit.tags %></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end:article-content -->
+
+              <!-- begin:description -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="heading-title">
+                        <h3>Description</h3>
+                      </div>
+
+                      <p><%=@produit.product_desc %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end:description -->
+
+              <!-- begin:comments -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-container">
+                    <div class="post-content">
+                      <div class="heading-title">
+                        <h3><%= @produit.comments.size %> Comments On This Image</h3>
+                      </div>
+                      <!-- begin:comment-list -->
+                      <div id="comments">
+                        <% unless @produit.comments.nil? %>
+                            <%= render :partial => @produit.comments %>
+                        <% end %>
+                      </div>
+                      <!-- end:comment-list -->
+                      <div class="post-comment">
+                        <div class="heading-title">
+                            <h3>Post Comment</h3>
+                        </div>
+
+                        <%= form_for([@produit, @produit.comments.build]) do |f| %>
+                            <div class="form-group">
+                                <%= f.label :body, class: 'sr-only' %><br>
+                                <%= f.text_area :body, class: 'form-control', rows: '5', placeholder: 'Enter Comment:'%>
+                            </div>
+                            <div class="form-group">
+                                <%= f.label :commenter %><br>
+                                <%= f.text_field :commenter,  class: 'form-control', rows: '5', placeholder: 'Enter your name:' %>
+                            </div>
+                            <div class="form-group">
+                                <%= f.label :email, class: 'sr-only' %><br>
+                                <%= f.text_field :email, class: 'form-control', rows: '5', placeholder: 'Enter Email:'%>
+                            </div>
+                            <div class="form-group">
+                                <%= f.label :website, class: 'sr-only' %><br>
+                                <%= f.text_field :website, class: 'form-control', rows: '5', placeholder: 'Enter website:'%>
+                            </div>
+                            <%= f.submit id:'create_comment', class: "btn btn-primary" %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

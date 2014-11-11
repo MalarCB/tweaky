@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'font-awesome-rails'
-gem 'bootstrap-select-rails'
+#gem 'bootstrap-select-rails'
 gem 'compass-rails'
 gem 'select2-rails'
 
@@ -39,3 +39,5 @@ end
 gem 'jquery-colorbox-rails'
 gem 'colorbox-rails'
 gem 'geocoder'
+
+gem 'thin'

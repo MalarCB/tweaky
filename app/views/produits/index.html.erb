@@ -28,6 +28,7 @@
         <thead>
         <tr>
           <th>Name</th>
+          <th>Product Desc</th>
           <th>Imagename</th>
           <th>Url</th>
           <th>Prixvente</th>
@@ -44,6 +45,7 @@
         <% @produits.each do |produit| %>
             <tr>
               <td><%= produit.name %></td>
+              <td><%= produit.product_desc %></td>
               <td><%= produit.imagename %></td>
               <td><%= produit.url %></td>
               <td><%= produit.prixvente %></td>

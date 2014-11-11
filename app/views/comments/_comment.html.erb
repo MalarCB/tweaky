@@ -1,0 +1,17 @@
+<div class="comments">
+  <ul>
+    <li>
+      <div class="comment-container">
+        <div class="comment-meta">
+          <%= image_tag('avatar.jpg', class: 'img-responsive  comment-avatar' , alt: "comment avatar", style: 'height:30px') %>
+          <span class="comment-author"><a href="#"><%= comment.commenter %></a></span>
+          <span class="comment-date"> <%= time_ago_in_words(comment.created_at) %></span>
+          <span class="comment-reply"><a href="#"><em>Reply</em></a></span>
+        </div>
+        <div class="comment-text">
+          <p> <%= comment.body %>.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

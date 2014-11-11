@@ -12,12 +12,8 @@
       <a class="navbar-brand" href="/">Quilling Dezign Store</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="/"></a>
-        </li>
         <li class="page-scroll">
           <%= link_to 'Products', vitrine_path %>
         </li>
@@ -30,10 +26,14 @@
         <li class="page-scroll">
           <a href="#contact">Contact</a>
         </li>
+        <li class="page-scroll" style="display: none">
+          <%= link_to 'Sign-in', login_path %>
+        </li>
+        <li class="page-scroll">
+          <%= link_to 'Sign-Up', sign_up_path %>
+        </li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
 </nav>
 
