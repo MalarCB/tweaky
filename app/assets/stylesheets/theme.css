@@ -8,6 +8,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
+
+.post-container .caption{
+    padding: 15px;
+}
 .name {
     font-family: 'Covered By Your Grace', cursive;
 }
@@ -35,12 +39,16 @@ a.active {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+h4
+{
+    font-family: 'Lora', serif;
 }
 
 hr.star-light,
@@ -207,14 +215,14 @@ section.success {
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#portfolio .portfolio-item {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption {
+#portfolio .portfolio-item .caption {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -225,11 +233,11 @@ section.success {
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+#portfolio .portfolio-item .caption:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+#portfolio .portfolio-item .caption .caption-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -240,12 +248,12 @@ section.success {
     color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+#portfolio .portfolio-item .caption .caption-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+#portfolio .portfolio-item .caption .caption-content h3,
+#portfolio .portfolio-item .caption .caption-content h4 {
     margin: 0;
 }
 

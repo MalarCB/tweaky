@@ -3,8 +3,9 @@ class ProduitsController < ApplicationController
   before_action :set_produit, only: [:show, :edit, :update, :destroy]
   before_filter :restrict_admin_tool_access_by_ipaddress, except: [:display]
   before_action :additional_params, only: [:create]
+
   def display
-    @produits = Produit.all
+    @produits = Produit.order('created_at DESC').all
   end
 
   def index
