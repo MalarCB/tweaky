@@ -9,35 +9,35 @@
                 <h3><i class="fa fa-lock"></i> Sign in</h3>
               </div>
               <p>Sign in using your registered account.</p>
-              <form class="form-horizontal" role="form">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-paw"></i></span>
-                  <input type="text" class="form-control input-md" placeholder="Username">
-                </div>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                  <input type="password" class="form-control input-md" placeholder="Password">
-                </div>
-                <div class="form-group">
-                  <label for="keep" class="col-sm-6 col-xs-12 control-label"><input type="checkbox"> Keep me sign in</label>
-                  <div class="col-sm-6 col-xs-12 btn-signin">
-                    <a href="#" class="btn btn-default btn-sm">Cancel</a>
-                    <input type="submit" class="btn btn-primary btn-sm" value="Sign in">
+              <%= form_tag(sign_in_path, class: "form-horizontal") do |f| %>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-paw"></i></span>
+                    <%= text_field_tag :email, class: 'form-control input-md', placeholder: 'Email' %>
                   </div>
-                </div>
-                <hr>
-                <p>Sign in using social networks:</p>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block btn-sm marg-xs-5"><i class="fa fa-twitter fa-tw fa-lg"></i> Signin with twitter</a>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-paw"></i></span>
+                    <%= password_field_tag :password, class: 'form-control input-md', placeholder: 'Password' %>
                   </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block btn-sm marg-xs-5"><i class="fa fa-facebook-square fa-fb fa-lg"></i> Signin with facebook</a>
+                  <div class="form-group">
+                    <label for="keep" class="col-sm-6 col-xs-12 control-label"><input type="checkbox"> Keep me sign in</label>
+                    <div class="col-sm-6 col-xs-12 btn-signin">
+                      <a href="#" class="btn btn-default btn-sm">Cancel</a>
+                      <%= submit_tag class: 'btn btn-primary btn-sm' %>
+                    </div>
                   </div>
-                </div>
-                <hr>
-                <a href="#">Forgot your password ?</a>
-              </form>
+                  <hr>
+                  <p>Sign in using social networks:</p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <a href="#" class="btn btn-default btn-block btn-sm marg-xs-5"><i class="fa fa-twitter fa-tw fa-lg"></i> Signin with twitter</a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="#" class="btn btn-default btn-block btn-sm marg-xs-5"><i class="fa fa-facebook-square fa-fb fa-lg"></i> Signin with facebook</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <a href="#">Forgot your password ?</a>
+              <% end %>
             </div>
           </div>
         </div>
