@@ -6,7 +6,8 @@
  * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
  *
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
- */
+ *//*
+
 
 (function( $ ){
 
@@ -478,7 +479,7 @@
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                   // Only one? Being strict? Just output it.
-                  $helpBlock.html(errorsFound[0] + 
+                  $helpBlock.html(errorsFound[0] +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.
@@ -876,13 +877,17 @@
 		return new RegExp("^" + inputstring + "$");
 	}
 
-  /**
+  */
+/**
    * Thanks to Jason Bunting via StackOverflow.com
    *
    * http://stackoverflow.com/questions/359788/how-to-execute-a-javascript-function-when-i-have-its-name-as-a-string#answer-359910
    * Short link: http://tinyurl.com/executeFunctionByName
-  **/
-  function executeFunctionByName(functionName, context /*, args*/) {
+  **//*
+
+  function executeFunctionByName(functionName, context */
+/*, args*//*
+) {
     var args = Array.prototype.slice.call(arguments).splice(2);
     var namespaces = functionName.split(".");
     var func = namespaces.pop();
@@ -910,3 +915,4 @@
   };
 
 })( jQuery );
+*/
