@@ -19,64 +19,64 @@
 
                 <div class="field">
                   <%= f.label :name %><br>
-                  <%= f.text_field :name %>
+                  <%= f.text_field :name, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :product_desc %><br>
-                  <%= f.text_area :product_desc %>
+                  <%= f.text_area :product_desc, class: 'form-control input-md' %>
                 </div>
 
                 <div class="field">
                   <%= f.label :imagename %><br>
-                  <%= f.text_field :imagename %>
+                  <%= f.text_field :imagename, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :url %><br>
-                  <%= f.text_field :url %>
+                  <%= f.text_field :url, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :prixvente %><br>
-                  <%= f.text_field :prixvente %>
+                  <%= f.text_field :prixvente, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :prixnet %><br>
-                  <%= f.text_field :prixnet %>
+                  <%= f.text_field :prixnet, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :devise %><br>
-                  <%= f.text_field :devise %>
+                  <%= f.text_field :devise, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :commission %><br>
-                  <%= f.text_field :commission %>
+                  <%= f.text_field :commission, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :stock %><br>
-                  <%= f.number_field :stock %>
+                  <%= f.number_field :stock, class: 'form-control input-md' %>
                 </div>
 
                 <div class="field">
                   <%= f.label :likes %><br>
-                  <%= f.number_field :likes %>
+                  <%= f.number_field :likes, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :downloads %><br>
-                  <%= f.number_field :downloads %>
+                  <%= f.number_field :downloads, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :tags %><br>
-                  <%= f.text_area :tags %>
+                  <%= f.text_area :tags, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :status %><br>
-                  <%= f.check_box :status %>
+                  <%= f.check_box :status, class: 'form-control input-md' %>
                 </div>
                 <div class="field">
                   <%= f.label :vues %><br>
-                  <%= f.number_field :vues %>
-                </div>
+                  <%= f.number_field :vues, class: 'form-control input-md' %>
+                </div> <br>
                 <div class="actions">
-                  <%= f.submit %>
+                  <%= f.submit class: 'btn btn-primary' %>
                 </div>
             <% end %>
           </div>
