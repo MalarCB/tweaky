@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   before_action :set_user, only: [:destroy]
-  before_action :additional_params, only: [:create]
+  before_action :additional_params, only: [:register]
 
   def index
     @users = User.all
@@ -11,14 +11,14 @@ class UserController < ApplicationController
   end
 
   def login
-    @user = User.find(email: params[:email], password: params[:password])
+    @user = User.find_by(email: params[:email], password: params[:password])
     respond_to do |format|
       if @user.nil?
-        format.html { render action: :login }
+        format.html { render :login }
         format.json { render json: 'Invalid email/password', status: :unprocessable_entity }
       else
-        session[:username] = @user.username
-        format.html { redirect_to resource_list_path }
+        session[:username] = @user.email
+        format.html { redirect_to welcome_user_path }
       end
     end
   end
@@ -28,15 +28,16 @@ class UserController < ApplicationController
 
   def register
     @user = User.new(user_params)
-
-    respond_to do |format|
+    user = User.find_by(email: params[:user][:email])
+    if user.nil?
       if @user.save
-        session[:username] = @user.username
-        format.html { redirect_to resource_list_path }
+        redirect_to welcome_user_path, notice: 'User was successfully created.'
       else
-        format.html { render action: 'signup' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render action: 'signup' , notice: @user.errors
       end
+    else
+      flash[:error] = 'user exist already'
+       render action: 'signup'
     end
   end
 
@@ -44,16 +45,12 @@ class UserController < ApplicationController
     @user = User.new
   end
 
-  def create
-    @user = User.new(user_params)
-
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+  def check_email
+    @user = User.find_by(email: params[:email])
+    if @user.nil?
+      render json: 'success', status: 200
+    else
+      render json:  'fail', status: 422
     end
   end
 
@@ -74,12 +71,17 @@ class UserController < ApplicationController
     end
   end
 
+  def welcome
+
+  end
+
   private
   def set_user
     @user = User.find(params[:id])
   end
 
   def user_params
-    params.require(:model).permit(:user, :email, :password, :token, :status, :ipaddress, :siteid, :address1, :address2, :address3, :city, :state, :country, :zipcode)
+    params.require(:user).permit(:email, :password, :token, :status, :ipaddress, :siteid, :address1, :address2, :address3, :city, :state, :country, :zipcode,
+    :telephone_1, :telephone_2)
   end
 end

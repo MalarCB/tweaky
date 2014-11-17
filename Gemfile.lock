@@ -27,10 +27,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
+    bootstrap-select-rails (1.6.2)
     builder (3.2.2)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -63,7 +63,6 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.41.0)
     execjs (2.2.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -75,17 +74,10 @@ GEM
       railties (>= 3.2, < 5.0)
     fssm (0.2.10)
     geocoder (1.2.0)
-    heroku (3.10.1)
-      heroku-api (~> 0.3.19)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (= 1.6.7)
-      rubyzip
-    heroku-api (0.3.19)
-      excon (~> 0.38)
-      multi_json (~> 1.8)
     hike (1.2.3)
     i18n (0.6.11)
+    intl-tel-input-rails (3.6.0.1)
+      railties (>= 3.1)
     jbuilder (2.2.4)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -95,15 +87,12 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    launchy (2.4.3)
-      addressable (~> 2.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     mini_portile (0.6.1)
     minitest (5.4.2)
     multi_json (1.10.1)
-    netrc (0.7.9)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     pg (0.17.1)
@@ -133,8 +122,6 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rspec-collection_matchers (1.0.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -205,6 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
+  bootstrap-select-rails
   capybara (= 2.0.2)
   coffee-rails (~> 4.0.0)
   colorbox-rails
@@ -212,7 +200,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.4.1)
   font-awesome-rails
   geocoder
-  heroku
+  intl-tel-input-rails (~> 3.6.0.1)
   jbuilder (~> 2.0)
   jquery-colorbox-rails
   jquery-rails

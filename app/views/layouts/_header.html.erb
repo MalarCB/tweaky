@@ -14,24 +14,27 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li class="page-scroll" >
+          <%= link_to 'Sign-in', login_path, class: 'btn btn-primary'%>
+          <%#= render 'layouts/nav' %>
+        </li>
         <li class="page-scroll">
           <%= link_to 'Products', vitrine_path %>
         </li>
         <li class="page-scroll">
           <a href="#portfolio">Collections</a>
         </li>
-        <li class="page-scroll">
+        <li class="page-scroll" style="display: none;">
           <a href="#about">About</a>
         </li>
         <li class="page-scroll">
           <a href="#contact">Contact</a>
         </li>
-        <li class="page-scroll" >
-          <%= link_to 'Sign-in', login_path %>
-        </li>
+
         <li class="page-scroll">
           <%= link_to 'Sign-Up', sign_up_path %>
         </li>
+
       </ul>
     </div>
   </div>

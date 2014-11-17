@@ -1,4 +1,4 @@
-<div id="content">
+<div id="login" class="borderbox formpage">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
@@ -9,20 +9,20 @@
                 <h3><i class="fa fa-lock"></i> Sign in</h3>
               </div>
               <p>Sign in using your registered account.</p>
-              <%= form_tag(sign_in_path, class: "form-horizontal") do |f| %>
+              <%= form_tag sign_in_path , class: 'form-horizontal' do |f| %>
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-paw"></i></span>
-                    <%= text_field_tag :email, class: 'form-control input-md', placeholder: 'Email' %>
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <%= text_field_tag :email, '', class: 'form-control input-md', placeholder: 'Email' %>
                   </div>
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-paw"></i></span>
-                    <%= password_field_tag :password, class: 'form-control input-md', placeholder: 'Password' %>
+                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                    <%= password_field_tag :password,'', class: 'form-control input-md', placeholder: 'Password' %>
                   </div>
                   <div class="form-group">
                     <label for="keep" class="col-sm-6 col-xs-12 control-label"><input type="checkbox"> Keep me sign in</label>
                     <div class="col-sm-6 col-xs-12 btn-signin">
-                      <a href="#" class="btn btn-default btn-sm">Cancel</a>
-                      <%= submit_tag class: 'btn btn-primary btn-sm' %>
+                      <%= button_tag 'Cancel', class: "btn btn-primary btn-sm" %>
+                      <%= submit_tag 'Sign-in', class: 'btn btn-primary btn-sm' %>
                     </div>
                   </div>
                   <hr>
@@ -42,7 +42,6 @@
           </div>
         </div>
       </div>
-      <!-- break -->
     </div>
   </div>
 </div>

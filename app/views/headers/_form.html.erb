@@ -1,0 +1,50 @@
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
+        <div class="post-container">
+          <div class="post-content">
+            <%= form_for(@header) do |f| %>
+                <% if @header.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@header.errors.count, "error") %> prohibited this header from being saved:</h2>
+
+                      <ul>
+                        <% @header.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                <% end %>
+
+                <div class="field">
+                  <%= f.label :heading %><br>
+                  <%= f.text_field :heading, class: 'form-control input-md' %>
+                </div>
+                <div class="field">
+                  <%= f.label :imgurl %><br>
+                  <%= f.text_field :imgurl, class: 'form-control input-md' %>
+                </div>
+                <div class="field">
+                  <%= f.label :status %><br>
+                  <%= f.check_box :status, class: 'form-control input-md' %>
+                </div>
+                <div class="field">
+                  <%= f.label :detailurl %><br>
+                  <%= f.text_field :detailurl, class: 'form-control input-md' %>
+                </div>
+                <div class="actions">
+                  <%= f.submit %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @header.heading %>
+</p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @header.imgurl %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @header.status %>
+</p>
+
+<p>
+  <strong>Detailurl:</strong>
+  <%= @header.detailurl %>
+</p>
+
+<%= link_to 'Edit', edit_header_path(@header) %> |
+<%= link_to 'Back', headers_path %>

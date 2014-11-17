@@ -16,14 +16,19 @@ Rails.application.routes.draw do
   get 'home', to: 'home#index', as: :home
 
   get 'user/login', to: 'user#signin', as: :login
-  post 'user/login', to: 'user#sign_in', as: :sign_in
+  post 'user/login', to: 'user#login', as: :sign_in
 
   get 'user/signup', to: 'user#signup', as: :sign_up
   post 'user/signup', to: 'user#register', as: :register
+
+  get 'user/welcome', to: 'user#welcome', as: :welcome_user
 
   get 'products', to: 'product#index', as: :products
   get 'product/new', to: 'product#new', as: :new_product
   post 'products', to: 'product#create', as: :create_product
 
   get 'download', to: 'produits#download', as: :download
+
+  resources :headers
 end
+
