@@ -85,3 +85,5 @@ class UserController < ApplicationController
     :telephone_1, :telephone_2)
   end
 end
+
+
